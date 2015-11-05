@@ -16,52 +16,69 @@ var gameCurrentlyActive;
 //
 window.onload = function(){
     
-    // Read and save the query parameters from your form 
-    // HINT: Fill out and use the function readQueryParams 
-    /* YOUR CODE HERE */
+    readQueryParams();
+    createMoleField(GLOBALS.MOLE_FIELD_ROWS, GLOBALS.MOLE_FIELD_COLUMNS);
 
-    // Create the mole field 
-    // HINT: Fill out and use the function createMoleField 
-    /* YOUR CODE HERE */
-
-    // Get the score-board dom element, and save it into 
-    // our variable scoreBoard
-    /* YOUR CODE HERE */
-
-    // Get the game-starter button dom element and save it
-    // into our variable gameStartButton
-    /* YOUR CODE HERE */
+    // Get the DOM elements associated with each of these things.
+    scoreBoard = document.getElementById('score-board');
+    gameStartButton = document.getElementById('game-starter');
 
     // Add an event listener to the gameStartButton. 
     // It should call the startGame function when the 
     // 'click' event is triggered
-    /* YOUR CODE HERE */
+    gameStartButton.addEventListener('click', startGame);
 };
 
 // Examine document.location.search and extract the info 
 // from our form. Store each key/value pair as a property in GLOBALS.
-// GLOBALS should have number values from the form for each of these
-// keys:
-//   MOLE_UP_MIN (in seconds)
-//   MOLE_UP_MAX (in seconds)
-//   NUMBER_OF_ROUNDS
-//   MOLES_PER_ROUND
-//   ROUND_COOLDOWN (in seconds)
+// GLOBALS should look something like this when we're done.
+//   {  MOLE_UP_MIN: "1",
+//      MOLE_UP_MAX: "4",
+//      NUMBER_OF_ROUNDS: "5",
+//      MOLES_PER_ROUND: "5",
+//      ROUND_COOLDOWN: "5" }
 function readQueryParams() {
-    /* YOUR CODE HERE */
+    
+    if(document.location.search) {
+        var queryString = document.location.search.replace('?', '');
+
+        queryString.split('&').forEach(function (pair) {
+            var pairArray = pair.split('=');
+            GLOBALS[pairArray[0]] = pairArray[1]
+        });
+    }
+    console.log(GLOBALS);    
 }
 
 // Create and insert a 3x3 HTML table.
 // Use createSingleMoleHole() to create the <td> elements
 function createMoleField() {
-    /* YOUR CODE HERE */
+    // Select the DOM element for the mole-field
+    var field = document.getElementById('mole-field');
+
+    for(var i = 0; i < 3; i++) {
+        // Create a table row element (<tr>)
+        var tableRow = document.createElement('tr');
+        
+        for(var j = 0; j < 3; j++) {
+            tableRow.appendChild(createSingleMoleHole());
+        }
+        
+        field.appendChild(tableRow);
+    }
 }
 
-// Create a complex HTML snippet and return it. 
-// The element returned from this function should look exactly like this
-// <td><div data-hole-occupied="false" class="mole-hole"></div></td>
+// create a complex HTML element and return it. 
+// The element returned from this function should look like this
+// be <td><div data-hole-occupied="false" class="mole-hole"></div></td>
 function createSingleMoleHole() {
-    /* YOUR CODE HERE */
+    var tableData = document.createElement('td');
+    var hole = document.createElement('div');
+    hole.className = 'mole-hole';
+    hole.setAttribute('data-hole-occupied', "false");
+    tableData.appendChild(hole);
+
+    return tableData;
 }
 
 ///
@@ -80,6 +97,7 @@ function startGame() {
     else {
         gameCurrentlyActive = true;    
     }
+    
 
     // Set the scoreboard back to zero
     scoreBoard.setAttribute('data-score', 0);
@@ -89,7 +107,6 @@ function startGame() {
     gameStartButton.style.visibility = "hidden";
     initiateRound(0);
 }
-
 /**
 * Use a closure and the event loop to act every ROUND_COOLDOWN seconds
 */
@@ -105,7 +122,7 @@ function initiateRound(roundNumber) {
         if(roundNumber < GLOBALS.NUMBER_OF_ROUNDS) {
             // Create the moles 
             for(var i = 0; i < GLOBALS.MOLES_PER_ROUND; i++) {
-                new Mole(GLOBALS.MOLE_UP_MIN*1000, GLOBALS.MOLE_UP_MAX*1000);
+                new Mole(GLOBALS.MOLE_UP_MIN, GLOBALS.MOLE_UP_MAX);
             }
 
             // Next round, using our precious closed-over parameter 
