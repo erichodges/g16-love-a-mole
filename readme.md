@@ -1,7 +1,7 @@
 # love-a-mole
 During this exercise, you'll apply your knowledge of HTML forms and the [DOM][00].
 
-Your goal is to create a web-based version of [Whack-a-Mole][01]. For those of you unfammiliar with this awesome game, here's the objective: In a limited amount of time, moles will rise from a collection of holes in a randomized order. In turn, a player attempts to strike every rising mole with a mallet. Sounds fun, right?!
+Your goal is to create a web-based version of [Whack-a-Mole][01]. For those of you unfammiliar with this awesome game, here's the objective: In a limited amount of time, moles will rise from a collection of holes in a randomized order. When a mole appears, a player attempts to strike the mole with a mallet before the mole returns to its hole. Sounds fun, right?!
 
 # Instructions
 To complete this exercise, you'll need to follow the following three steps:
