@@ -52,7 +52,6 @@ When you've made some meaningful progress--such as completed the style for a CSS
 
 # Step 3 of 3: Submission
 When you're done, push your work to your forked repository. Then copy the URL of your forked repository and paste it into the LMS (learning management system).
->>>>>>> Update README.md
 
 [00]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 [01]: https://en.wikipedia.org/wiki/Whac-A-Mole
