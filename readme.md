@@ -1,7 +1,7 @@
 # love-a-mole
 During this exercise, you'll apply your knowledge of HTML forms and the DOM (document object model).
 
-Your goal is to create a web-based version of [Whack-a-Mole][wack-a-mole]. For those of you unfammiliar with this awesome game, here's the objective: In a limited amount of time, moles will rise from a collection of holes in a randomized order. In turn, a player attempts to strike every rising mole with a mallet. Sounds fun, right?!
+Your goal is to create a web-based version of [Whack-a-Mole][0]. For those of you unfammiliar with this awesome game, here's the objective: In a limited amount of time, moles will rise from a collection of holes in a randomized order. In turn, a player attempts to strike every rising mole with a mallet. Sounds fun, right?!
 
 # Instructions
 To complete this exercise, you'll need to follow the following three steps:
@@ -54,4 +54,4 @@ When you've made some meaningful progress--such as completed the style for a CSS
 When you're done, push your work to your forked repository. Then copy the URL of your forked repository and paste it into the LMS (learning management system).
 >>>>>>> Update README.md
 
-[whack-a-mole]: https://en.wikipedia.org/wiki/Whac-A-Mole
+[0]: https://en.wikipedia.org/wiki/Whac-A-Mole
