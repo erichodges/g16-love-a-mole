@@ -47,7 +47,6 @@ Several of the files in above directory is missing code. Your task is to locate 
 2. `css/whack-a-mole.css`
 3. `javascript/main.js`
 4. `javascript/mole.js`
-```
 
 When you've made some meaningful progress--such as completed the style for a CSS selector or completed the definition of a function--add and commit your work. In other words, don't have your entire solution in one commit!
 
