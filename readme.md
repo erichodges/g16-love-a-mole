@@ -50,8 +50,12 @@ Several of the files in above directory is missing code. Your task is to locate 
 
 When you've made some meaningful progress--such as completed the style for a CSS selector or completed the definition of a function--add and commit your work. In other words, don't have your entire solution in one commit!
 
-# Step 3 of 3: Submission
+## Step 3 of 3: Submission
 When you're done, push your work to your forked repository. Then copy the URL of your forked repository and paste it into the LMS (learning management system).
+
+# Creator
+Creator: [Tyler Bettilyon][44]
 
 [00]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 [01]: https://en.wikipedia.org/wiki/Whac-A-Mole
+[44]: https://github.com/teb311
