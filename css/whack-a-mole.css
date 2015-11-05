@@ -44,26 +44,12 @@ html {
    Bonus points for making the mouse turn into heart.png when the 
    mouse hovers over a mole! */
 .mole {
-<<<<<<< HEAD
-  position: relative;
-  width: 62px;
-  height: 62px;
-  background-image: url('../images/mole.png');
-  background-repeat: no-repeat;
-  cursor: url('../images/heart.png'), pointer;
-=======
 
->>>>>>> 53508ab... Re-organize repo structure
 }
 
 /* When a mole has been clicked, it's in love.
    make sure when a mole has been clicked it gets the 
    foundLove.png as it's background */
 .in-love {
-<<<<<<< HEAD
-  background-image: url('../images/mole.png'), url('../images/foundLove.png');
-  background-repeat: repeat-x;
-=======
 
->>>>>>> 53508ab... Re-organize repo structure
 }
