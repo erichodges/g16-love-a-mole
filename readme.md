@@ -53,6 +53,18 @@ When you've made some meaningful progress--such as completed the style for a CSS
 ## Step 3 of 3: Submission
 When you're done, push your work to your forked repository. Then copy the URL of your forked repository and paste it into the LMS (learning management system).
 
+## What it Looks Like
+
+A form without good labels (B+ Tyler...)
+![](images/form.png)
+
+A board with moles
+![](images/someMoles.png)
+
+A Loved Mole
+![](images/lovedMole.png)
+
+
 # Creator
 Creator: [Tyler Bettilyon][44]
 
