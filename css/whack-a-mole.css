@@ -1,21 +1,28 @@
 /* Some CSS must be finished */
 
 html {
-  background-color: #ADE0FF; /* a bright beautiful blue */
+  background-color: #ADE0FF;
+  /* a bright beautiful blue */
   font-family: Tahoma;
 }
 
-#main-header, #sub-header {
+#main-header,
+#sub-header {
   text-align: center;
 }
 
 #game-starter {
   margin: 0 auto;
   display: table;
-
- /* Make the game starter button nicer to look at */
- /* Using your own judegement about "nice" */
+  background-color: #7FE3AF;
+  /* Make the game starter button nicer to look at */
+  /* Using your own judegement about "nice" */
 }
+
+#game-starter:hover {
+  background-color: #136E23;
+}
+
 
 /* Make the game-starter button change colors when the mouse 
    is hovering over it */
@@ -24,32 +31,50 @@ html {
   width: 278px;
   height: 278px;
   margin: 30px auto;
-  background-color: #7FE3AF; /* a grand garden green */
+  background-color: #7FE3AF;
+  /* a grand garden green */
   background-clip: padding-box;
   border-radius: 10px;
-  border: 5px solid #136E23; /* a darker green, like hedges */
+  border: 5px solid #136E23;
+  /* a darker green, like hedges */
 }
+
 
 /* Use the following selectors style moles and mole-holes 
    HINT: the mole.png file is 62px by 62px */
+
 #mole-field td {
-  
+  width: 62px;
+  height: 62px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .mole-hole {
-
+  width: 62px;
+  height: 62px;
 }
+
 
 /* Make sure every mole appears as the mole.png file in this folder 
    Bonus points for making the mouse turn into heart.png when the 
    mouse hovers over a mole! */
-.mole {
 
+.mole {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  background-image: url('../images/mole.png');
+  background-repeat: no-repeat;
+  cursor: url('../images/heart.png'), pointer;
 }
+
 
 /* When a mole has been clicked, it's in love.
    make sure when a mole has been clicked it gets the 
    foundLove.png as it's background */
-.in-love {
 
+.in-love {
+  background-image: url('../images/mole.png'), url('../images/found-love.png');
+  background-repeat: repeat-x;
 }
